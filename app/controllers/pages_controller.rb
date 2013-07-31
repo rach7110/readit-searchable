@@ -7,10 +7,12 @@ class PagesController < ApplicationController
   end
 
   def search
-
     params[:per_page] ||= 25
     params[:page]     ||= 1
-    @links = Link.search(params[:q]).page(params[:query]).per_page(params[:per_page])
+
+    @search = Link.search(params[:q], params)
+    @links = Link.search.results
+    # @links = Link.search(params[:q]).page(params[:query]).per_page(params[:per_page])
     render 'index'
   end
 
