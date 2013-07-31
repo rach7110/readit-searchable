@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'nokogiri', '1.5.9'
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -9,7 +10,11 @@ gem 'sqlite3'
 gem 'devise'
 gem 'haml'
 gem 'will_paginate'
+gem 'sunspot_rails'
 
+group :development do
+  gem 'sunspot_solr'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

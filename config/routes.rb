@@ -64,5 +64,8 @@ Readit::Application.routes.draw do
     resources :comments
   end
 
+  match 'search' => 'pages#search'
+
   root to: "pages#index"
+
 end
